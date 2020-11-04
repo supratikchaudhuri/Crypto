@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  color: #FFFFFF !important;
+  background-color: #212121;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color : #2398e6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style: none;
+}
+
+.coinlist-image {
+  width: 50px;
+}
+
+.coinlist-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.coinsummary {
+  border-color: white !important;
+  border-style: outset !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.coin-data-category {
+  font-size: 10px;
 }
+
+.delete-icon {
+  display: none !important;
+  position: absolute;
+  right: 6px;
+  color: blue 
+}
+
+.coin:hover .delete-icon {
+  display: block !important;
+}
+
+
+  .neoshadow{
+    border-radius: 35px;
+    background: #212121;
+    box-shadow:  23px 23px 46px #141414, 
+             -23px -23px 46px #2e2e2e;
+             padding : 20px
+  }
+
+  span, li {
+    background-color: #212121 !important;
+    color: rgb(221, 221, 221) !important;
+    list-style: none !important;
+    border: none !important;
+  }
+
+  .bg-color {
+    background: radial-gradient(circle farthest-side, #2398e6, #0359bd);
+  }
+
+  .dropdown-toggle > li > a{
+    background-color: #212121 !important;
+  }
+
+  .bg {
+    background-color: #333333 !important;
+    color : white !important
+  }
+
+  .item:hover{
+    background: radial-gradient(circle farthest-side, #2398e6, #0359bd);
+  
+  }
+
