@@ -62,7 +62,7 @@ const Chart = ({ data }) => {
     }
   };
 
-  return (
+  return ( 
     <div className="  mt-2 rounded p-3">
       <div>{renderPrice()}</div>
       <div>
@@ -71,19 +71,19 @@ const Chart = ({ data }) => {
       <div className="chart-button mt-1">
         <button
           onClick={() => setTimeFormat("24h")}
-          className="btn btn-outline-secondary btn-sm"
+          className={timeFormat === "24h" ? `btn btn-outline-secondary btn-sm bg-color` : `btn btn-outline-secondary btn-sm `}
         >
           24h
         </button>
         <button
           onClick={() => setTimeFormat("7d")}
-          className="btn btn-outline-secondary btn-sm mx-1"
+          className={timeFormat === "7d" ? `btn btn-outline-secondary btn-sm mx-1 bg-color` : `btn btn-outline-secondary btn-sm mx-1`}
         >
           7d
         </button>
         <button
           onClick={() => setTimeFormat("1y")}
-          className="btn bg-color btn-sm"
+          className={timeFormat === "1y" ? `btn btn-outline-secondary btn-sm bg-color` : `btn btn-outline-secondary btn-sm`}
         >
           1y
         </button>

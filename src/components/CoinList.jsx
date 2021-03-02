@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import coinGecko from "../api/coinGecko"
 import {WatchListContext } from "../context/watchListContext"
 import Coin from "./Coin"
+import { CircularProgress } from '@material-ui/core';
 
 function CoinList() {
 
@@ -9,7 +10,9 @@ function CoinList() {
     const  {watchList, deleteCoin}  = useContext(WatchListContext);
     const [isLoading, setIsLoading] = useState(false);
 
+    
     useEffect(() => {
+        // console.log(coins);
         const fetchData = async () => {
             setIsLoading(true);
 
@@ -23,7 +26,7 @@ function CoinList() {
             setIsLoading(false);
         }
 
-        //when its empty we are passing emoty param.id and by defalt its gonna fetch all the coins
+        //when its empty we are passing empty param.id and by defalt its gonna fetch all the coins
         if(watchList.length > 0){
             fetchData();
         } else{
@@ -36,7 +39,7 @@ function CoinList() {
 
     const renderCoins = () => {
         if(isLoading)
-            return <div>Loading Circle..</div>
+            return <CircularProgress/>
 
         return (
             <ul className="coinlist list-group mt-2">

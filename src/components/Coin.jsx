@@ -13,7 +13,7 @@ function Coin({coin, deleteCoin}) {
         // link from react router dom cuz when cliked it takesus to coin details page
         <Link to={`coins/${coin.id}`} className="text-decoration-none my-1 coin">
             <li className="coinlist-item list-group-item list-group-item-action d-flex justify-content-between align-items-center text-dark">
-            <div className="" style={inlineDisplay}>
+            <div style={inlineDisplay}>
                 <img className="coinlist-image" src={coin.image} alt="" />
                 {/* <h6>{coin.id}</h6> */}
             </div>
@@ -40,7 +40,7 @@ function Coin({coin, deleteCoin}) {
 
 
             <i 
-                className="delete-icon far fa-times-circle text-danger"
+                className="far fa-times-circle text-danger delete-icon"
                 onClick={(e) => {
                     e.preventDefault(); //so it doesn't navigate to the other page as it is a link 
                     deleteCoin(coin.id);

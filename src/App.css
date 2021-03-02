@@ -40,7 +40,6 @@ ul {
   display: none !important;
   position: absolute;
   right: 6px;
-  color: blue 
 }
 
 .coin:hover .delete-icon {
@@ -65,6 +64,7 @@ ul {
 
   .bg-color {
     background: radial-gradient(circle farthest-side, #2398e6, #0359bd);
+    color: white
   }
 
   .dropdown-toggle > li > a{

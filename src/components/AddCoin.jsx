@@ -21,7 +21,7 @@ const AddCoin = () => {
     ];
 
     const handleClick = (coin) => {
-        console.log(coin);
+        // console.log("adding" + coin);
         addCoin(coin);
         setIsActive(false);
     };
@@ -37,20 +37,20 @@ const AddCoin = () => {
         </button>
         <div className={isActive ? "dropdown-menu show bg" : "dropdown-menu"}>
             {availableCoins.map((el) => {
-            return (
-                <a
-                key = {el}
-                onClick={() => handleClick(el)}
-                href="#"
-                className="dropdown-item bg item"
-                >
-                {el}
-                </a>
-            );
+                return (
+                    <a
+                    key = {el}
+                    onClick={() => handleClick(el)}
+                    href="#"
+                    className="dropdown-item bg item"
+                    >
+                    {el}
+                    </a>
+                );
             })}
         </div>
         </div>
     );
-    };
+};
 
 export default AddCoin;
